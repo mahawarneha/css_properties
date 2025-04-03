@@ -1,0 +1,399 @@
+
+
+================================================================================
+=======================  shadow boxing =========================================
+
+
+1)shadow box:
+  box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.6);
+ 
+2)filter: grayscale(100%)
+
+3)<?php bloginfo('template_url'); ?>/
+
+
+4)highlighter
+  rgba(255, 72, 40, 1)
+
+5).row-eq-height:
+  .row-eq-height { 
+  display: -webkit-box; 
+  display: -webkit-flex; 
+  display: -ms-flexbox; 
+  display: flex; 
+  }
+
+
+6)slider:
+ 
+
+ <script>
+$(document).ready(function(){
+    $('.header_banner').bxSlider({
+    auto: true,
+    autoControls: true,
+//    mode: 'fade',
+    mode: 'horizontal',
+    speed: 1500,
+    pause: 10000,
+//    nextSelector: '#slider-next',
+//    prevSelector: '#slider-prev',
+//    nextText: 'Onward ?',
+//    prevText: '? Go back',
+    pager: ($(".bxslider2>.wrap").length > 1) ? true: false,
+});
+
+if(jQuery(window).width() > 768){
+$('.our_team').bxSlider({
+    slideWidth: 1000,
+    minSlides: 3,
+    maxSlides: 3,
+    moveSlides: 1,
+    slideMargin: 20,
+    auto: true,
+    autoControls: true,
+    boolean: true,
+    mode: 'horizontal',
+    nextSelector: '#slider-next',
+    prevSelector: '#slider-prev',
+    nextText: 'Onward ?',
+    prevText: '? Go back',
+//    pager: ($(".bxslider2>.wrap").length > 1) ? true: false,
+});
+}else {
+    $('.our_team').bxSlider({
+        minSlides: 1,
+        maxSlides: 1,
+        moveSlides: 1,
+        auto: true,
+        autoControls: true,
+        startSlide: 0,
+        mode: 'horizontal',
+        nextSelector: '#slider-next',
+        prevSelector: '#slider-prev',
+        nextText: 'Onward ?',
+        prevText: '? Go back',
+//        pager: ($(".bxslider2>.wrap").length > 1) ? true: false,
+    });
+}
+
+
+});
+
+
+jQuery(window).load(function() {
+    jQuery('.bx-wrapper .bx-loading').hide();
+});
+</script>
+
+
+
+6)
+  a)css
+   .slide > img {
+    height: 380px;
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+     filter: grayscale(100%);
+    
+/*filter: url(../images/gray.svg#grayscale);*/
+   
+filter: gray;
+	transition: all ease-in 200ms;
+	-moz-transition: all ease-in 200ms; /* Firefox 4 */
+	-webkit-transition: all ease-in 200ms; /* Safari and Chrome */
+	-o-transition: all ease-in 200ms; /* Opera */
+	-ms-transition: all ease-in 200ms; /* IE9? */
+}
+ 
+.slide > img:hover {
+     height: 380px;
+     width: 100%;
+    -webkit-filter: grayscale(0); 
+    -moz-filter: grayscale(0); 
+    -ms-filter: grayscale(0); 
+    -o-filter: grayscale(0); 
+     filter: grayscale(0); 
+    /
+
+*filter: url(../images/gray.svg#normal);*/
+    filter: none ;
+}
+
+
+
+
+
+
+7)
+opening_hour_section { 
+  background: url(../images/time-bg-image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;
+   background-size: cover; 
+   margin: 0px 0px 0px;
+   overflow: hidden;
+   padding: 60px 0px; 
+   text-align: center; 
+   width: 100%; 
+}
+
+8)
+
+<div class="content_entry_wrap">
+    <ul>
+        <li>
+            <div class="flip_box">
+                <div class="flip_box_inner">
+                    <div class="flip_box_front">
+                        <img src="images/why-cliffside.jpg" alt="image" class="service_image">
+                        <h3>Why Cliffside?</h3>
+                    </div>
+                    <div class="flip_box_back">
+                        <h3>Why Cliffside?</h3>
+                        <p>The answer is simple. We want you to go to treatment once and recover for good.</p>
+                        <a href="javascript:void(0)" class="more_button">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="flip_box">
+                <div class="flip_box_inner">
+                    <div class="flip_box_front">
+                        <img src="images/view-our-facility.jpg" alt="image" class="service_image">
+                        <h3>View Our Facility</h3>
+                    </div>
+                    <div class="flip_box_back">
+                        <h3>View Our Facility</h3>
+                        <p>Cliffside Malibu is a beautiful luxury estate, situated on two acres, overlooking Zuma Beach.</p>
+                        <a href="javascript:void(0)" class="more_button">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="flip_box">
+                <div class="flip_box_inner">
+                    <div class="flip_box_front">
+                        <img src="images/life-at-cliffside-new.jpg" alt="image" class="service_image">
+                        <h3>Life at Cliffside</h3>
+                    </div>
+                    <div class="flip_box_back">
+                        <h3>Life at Cliffside</h3>
+                        <p>Treatment programs at Cliffside Malibu have been designed to facilitate a full recovery from addiction.</p>
+                        <a href="javascript:void(0)" class="more_button">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="flip_box">
+                <div class="flip_box_inner">
+                    <div class="flip_box_front">
+                        <img src="images/life-after-cliffside-new.jpg" alt="image" class="service_image">
+                        <h3>Life After Cliffside</h3>
+                    </div>
+                    <div class="flip_box_back">
+                        <h3>Life After Cliffside</h3>
+                        <p>The goal of treatment is to create within you the skills and ability to remain clean and sober at home.</p>
+                        <a href="javascript:void(0)" class="more_button">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    </div>
+
+9)
+Library JS
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+==============================================================================================
+==================================== flip-box =================================================
+
+<div class="flip_box">
+	<div class="flip_box_inner">
+		<div class="flip_box_front">
+			<img src="images/why-cliffside.jpg" alt="image" class="service_image" />
+			<h3>Why Cliffside?</h3>
+		</div>
+		<div class="flip_box_back">
+			<h3>Why Cliffside?</h3>
+			<p>The answer is simple. We want you to go to treatment once and recover for good.</p>
+			<a href="javascript:void(0)" class="more_button">learn more</a>
+		</div>
+	</div>
+</div>
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+CSS
+
+.flip_box {
+	background: transparent;
+	border: 1px solid #f1f1f1;
+	height: 400px;
+	margin: 0 auto;
+	perspective: 1000px;
+	width: 90%;
+}
+.flip_box_inner {
+	height: 400px;
+	position: relative;
+	text-align: center;
+	transition: transform 0.8s;
+	-moz-transition: transform 0.8s;
+	-ms-transition: transform 0.8s;
+	-o-transition: transform 0.8s;
+	-webkit-transition: transform 0.8s;
+	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	width: 100%;
+}
+.flip_box:hover .flip_box_inner {
+	transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+.flip_box_front, .flip_box_back {
+	backface-visibility: hidden;
+	height: 400px;
+	position: absolute;
+	width: 100%;
+}
+.flip_box_front {
+	background: transparent;
+	/*color: #000;*/
+}
+img.service_image {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 400px;
+	width: 100%;
+	object-fit: cover;
+	-moz-object-fit: cover;
+	-ms-object-fit: cover;
+	-o-object-fit: cover;
+	-webkit-object-fit: cover;
+}
+.flip_box_front h3 {
+	background: rgba(150,51,104,0.3);
+	/*bottom: 0;*/
+	color: #fff;
+	font-family: 'Kreon', sans-serif;
+	font-size: 28px;
+	font-weight: 500;
+	font-style: normal;
+	left: 0;
+	margin: 0px auto;
+	padding: 15px;
+	position: absolute;
+	right: 0;
+	/*top: 110px;*/
+	top: 140px;
+
+
+	border: 2px solid #ddd;
+	width: 96%;
+}
+.flip_box_back {
+	background: #ebebeb;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 50px 20px 0px;
+	transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+.flip_box_back h3 {
+	color: #963368;
+	font-family: 'Kreon', sans-serif;
+	font-size: 28px;
+	font-weight: 500;
+	font-style: normal;
+	margin: 0px 0px 10px;
+	padding: 0px 0px;
+	text-decoration: none;
+}
+.flip_box_back p {
+	color: #444;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0px 0px 15px;
+	padding: 0px 0px;
+}
+.more_button {
+	background: #963368;
+	border: 0px solid #963368;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color: #fff !important;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0px 0px 20px;
+	padding: 10px 16px;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+.more_button:hover {
+	background: #963368;
+	border: 0px solid #963368;
+	color: #fff !important;
+}
+
+======================================================================
+====================== image properties ===============================
+
+ <div class="top_img"><img src="images/11.jpg"></div>
+
+css
+.wrapper .top_img img{
+	width:1214px;
+	height:135px;
+	margin:0px;
+	padding:0px;
+	border-radius:5px;
+	}
+
+Your unique Associate ID is shopping03ea-21
+ 
+	text-decoration: none;
+}
+
+===============================================================
+========================customer id ==========================
+771-487-8647 customer id
